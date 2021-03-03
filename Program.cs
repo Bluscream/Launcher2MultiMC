@@ -39,7 +39,7 @@ namespace MCLauncher2MultiMC
 
                 profile.MMCInstance.Config.Data.Global["name"] = (string.IsNullOrWhiteSpace(profile.Data.Name) ? profile.Data.Name : profile.Id);
                 // var JavaPath = new FileInfo();
-                if (profile.Data.JavaDir != null) profile.MMCInstance.Config.Data.Global["JavaPath"] = profile.Data.JavaDir.Replace("\\", "/");
+                if (profile.Data.JavaDir != null) profile.MMCInstance.Config.Data.Global["JavaPath"] = profile.Data.JavaDir.FullName.Replace("\\", "/");
                 else profile.MMCInstance.Config.Data.Global["OverrideJavaLocation"] = "false";
                 if (profile.Data.JavaArgs != null) profile.MMCInstance.Config.Data.Global["JvmArgs"] = profile.Data.JavaArgs;
                 else profile.MMCInstance.Config.Data.Global["OverrideJavaArgs"] = "false";
